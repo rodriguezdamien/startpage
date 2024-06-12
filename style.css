@@ -1,0 +1,66 @@
+:root{
+    --backgroundSize: 1000px;
+}
+
+body {
+    margin:0;
+    background-image: url("bg-mario.png");
+    background-size: var(--backgroundSize);
+    animation: movingBackground 60s linear infinite;
+    font-family: monospace;
+    font-size:1.5em;
+
+}
+
+.main-container{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display:flex;
+}
+
+.modal img{
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-menu{
+    padding:0 3em;
+    color:#cdd6f4;
+}
+
+.modal-menu h1{
+    text-align: center;
+}
+
+.google-search{
+    position:relative;
+    height:3em;
+    width:22em;
+    border-radius: 999px;
+    border:solid 1px #45475a;
+    background-color: #313244;
+
+}
+
+.google-search input{
+    padding:0 0 0 2.5em;
+    border-radius: 999px;
+    color:#cdd6f4;
+    font-size: 0.7em;
+    width: calc(100% - 2.5em);
+    height:100%;
+    border:none;
+    background: none;
+}
+
+
+@keyframes movingBackground {
+    from { background-position: 0 0;}
+    to {background-position: var(--backgroundSize) var(--backgroundSize);}
+  }
